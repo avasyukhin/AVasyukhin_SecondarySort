@@ -6,7 +6,9 @@ package ssort.main;
 public class Main {
     public static void main(String[] args){
         //hardcoded test args
-        args = new String[]{"data\\input.txt", "data\\output.txt"};
+        if (args.length==0) {
+            args = new String[]{"data\\input.txt", "data\\output.txt"};
+        }
         try {
             Runner.execute(args);
         } catch (Exception e) {
